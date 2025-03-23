@@ -13,9 +13,8 @@ env:
   REPOSITORY_NAME: application-codes
   WEB_FILE_ZIP: rentzone.zip
   WEB_FILE_UNZIP: rentzone
-  IMAGE_NAME: rentzone-app
-  IMAGE_TAG: latest
-
+  
+  
 jobs:
   # Configure AWS credentials 
   configure_aws_credentials:
