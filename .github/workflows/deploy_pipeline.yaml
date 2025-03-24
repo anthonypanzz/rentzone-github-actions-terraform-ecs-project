@@ -8,7 +8,7 @@ env:
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   AWS_REGION: us-east-1
-  TERRAFORM_ACTION: destroy
+  TERRAFORM_ACTION: apply
   GITHUB_USERNAME: anthonypanzz
   REPOSITORY_NAME: application-codes
   WEB_FILE_ZIP: rentzone.zip
@@ -254,7 +254,7 @@ jobs:
 
       - name: Retag Docker image
         env:
-          IMAGE_NAME: ${{ needs.needs.deploy_aws_infrastructure.outputs.image_name }}
+          IMAGE_NAME: ${{ needs.deploy_aws_infrastructure.outputs.image_name }}
         run: |
           docker tag ${{ env.IMAGE_NAME }} ${{ secrets.ECR_REGISTRY }}/${{ env.IMAGE_NAME }}
 
