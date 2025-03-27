@@ -98,6 +98,6 @@ Force a new deployment by restarting the ECS Fargate service using the updated t
 
 ## Conclusion
 
-In this project, we successfully deployed a dynamic web application on AWS with a fully automated CI/CD pipeline using GitHub Actions. Terraform managed the infrastructure, Docker handled the application containerization, and AWS services such as ECR, EC2, RDS, S3, and ECS Fargate ensured scalability and reliability.
+In this project, I successfully deployed a dynamic web application on AWS with a fully automated CI/CD pipeline using GitHub Actions. Terraform managed the infrastructure, Docker handled the application containerization, and AWS services such as ECR, EC2, RDS, S3, and ECS Fargate ensured scalability and reliability.
 
 
