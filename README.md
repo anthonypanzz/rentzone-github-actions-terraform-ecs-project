@@ -17,14 +17,14 @@ The following steps describe how AWS services are configured and how the CI/CD p
 
 ### 1. Configure AWS Credentials
 
-To interact with AWS services, you need to configure your AWS credentials. These will be used by GitHub Actions to interact with AWS services securely.
+To interact with AWS services, I needed to configure your AWS credentials. These will be used by GitHub Actions to interact with AWS services securely.
 ![Screenshot 2025-03-27 053925](https://github.com/user-attachments/assets/8b9f1b90-4bda-4615-a48b-d9cc6021d85b)
 
 ---
 
 ### 2. Build AWS Infrastructure with Terraform
 
-Use Terraform to manage and provision the necessary AWS resources, including EC2 instances, S3 buckets, ECR repositories, RDS, and ECS clusters. This will provision the infrastructure resources on AWS.
+Used Terraform to manage and provision the necessary AWS resources, including EC2 instances, S3 buckets, ECR repositories, RDS, and ECS clusters. This will provision the infrastructure resources on AWS.
 ![Screenshot 2025-03-27 054518](https://github.com/user-attachments/assets/e242646a-91c0-417c-82f0-2b8ad33d0636)
 
 ![Screenshot 2025-03-27 053943](https://github.com/user-attachments/assets/3651558e-c089-4485-862f-7ef919669a7b)
@@ -45,7 +45,7 @@ An Amazon Elastic Container Registry (ECR) repository is used to store the Docke
 
 ### 4. Start a Self-hosted EC2 Runner
 
-For running the CI/CD pipeline with GitHub Actions, you'll need a self-hosted EC2 runner.
+For running the CI/CD pipeline with GitHub Actions, I'll need a self-hosted EC2 runner.
 ![Screenshot 2025-03-27 054127](https://github.com/user-attachments/assets/12a69b1b-9c36-4c4e-8fa2-2c66b5d8e9be)
 ![Screenshot 2025-03-27 055544](https://github.com/user-attachments/assets/1d0354f9-bdc8-47b5-a8bc-a727e607e4c1)
 
@@ -64,7 +64,7 @@ GitHub Actions will automate the process of building and pushing the Docker imag
 
 ### 6. Create an Environment File and Export to S3
 
-An environment file containing necessary configurations (e.g., database URL, credentials) is created and uploaded to an S3 bucket.
+An environment file containing necessary configurations (database URL, credentials) is created and uploaded to an S3 bucket.
 ![Screenshot 2025-03-27 054223](https://github.com/user-attachments/assets/072fa606-8ae4-48ca-bfc4-eb42e1a3fa7b)
 ![Screenshot 2025-03-27 055649](https://github.com/user-attachments/assets/24b21378-cda0-4e54-8193-820a53c97294)
 
@@ -82,7 +82,7 @@ Flyway will handle database migrations to ensure the RDS database schema is up t
 
 ### 8. Stop the Self-hosted EC2 Runner
 
-Once the CI/CD pipeline completes, stop the self-hosted EC2 runner to save resources.
+Once the CI/CD pipeline completes, I stopped the self-hosted EC2 runner to save resources.
 ![Screenshot 2025-03-27 054308](https://github.com/user-attachments/assets/85b19e33-beb9-4a22-9285-25c55fe3545f)
 
 
@@ -90,7 +90,7 @@ Once the CI/CD pipeline completes, stop the self-hosted EC2 runner to save resou
 
 ### 9. Create a New Task Definition Revision
 
-After the Docker image is pushed to ECR, create a new task definition revision in ECS.
+After the Docker image is pushed to ECR, I created a new task definition revision in ECS.
 ![Screenshot 2025-03-27 054329](https://github.com/user-attachments/assets/18b4acba-d478-4a87-bf2e-4844e98ab10f)
 ![Screenshot 2025-03-27 054347](https://github.com/user-attachments/assets/c4008d87-5117-43fd-a0fe-0482d91e1c38)
 ![Screenshot 2025-03-27 055823](https://github.com/user-attachments/assets/f1d4059b-6202-465f-9d30-631a3f783a26)
@@ -101,7 +101,7 @@ After the Docker image is pushed to ECR, create a new task definition revision i
 
 ### 10. Restart the EC2 Fargate Service
 
-Force a new deployment by restarting the ECS Fargate service using the updated task definition.
+Forced a new deployment by restarting the ECS Fargate service using the updated task definition.
 ![Screenshot 2025-03-27 054402](https://github.com/user-attachments/assets/6a68b588-7b2a-45e4-a1e4-ff4a698c519a)
 ![Screenshot 2025-03-27 055841](https://github.com/user-attachments/assets/4355fb01-ecdb-420e-ab28-8a55ed788e4c)
 
