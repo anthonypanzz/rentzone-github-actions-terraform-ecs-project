@@ -89,6 +89,8 @@ Force a new deployment by restarting the ECS Fargate service using the updated t
 ![Screenshot 2025-03-27 055841](https://github.com/user-attachments/assets/4355fb01-ecdb-420e-ab28-8a55ed788e4c)
 
 ### Dynamic Web Application Deployment
+![Screenshot 2025-03-27 060643](https://github.com/user-attachments/assets/2871818a-9f71-4aeb-aabb-51ac3f07d1ce)
+
 ![Screenshot 2025-03-25 234412](https://github.com/user-attachments/assets/1b7aaedf-68e8-41ab-bb1d-85823082bebb)
 ![Screenshot 2025-03-25 234448](https://github.com/user-attachments/assets/ec16d49f-0f6f-4b72-85d7-ec52c2a6f05e)
 ![Screenshot 2025-03-25 234510](https://github.com/user-attachments/assets/0989ad78-b0ea-4c21-b06b-76b653d47040)
