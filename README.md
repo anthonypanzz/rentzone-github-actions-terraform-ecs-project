@@ -3,7 +3,7 @@
 ![Alt text](Diagram.png)
 ![Alt text](Diagram_2.png)
 
-
+---
 # Project Overview
 
 This project demonstrates the deployment of a dynamic web application on AWS using CI/CD pipelines and GitHub Actions. The infrastructure is provisioned using Terraform, and the application is containerized with Docker. The deployment utilizes AWS services like ECR (Elastic Container Registry), EC2 (Elastic Compute Cloud), S3 (Simple Storage Service), RDS (Relational Database Service), and ECS Fargate for seamless scaling and deployment.
