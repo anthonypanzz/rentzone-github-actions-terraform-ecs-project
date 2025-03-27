@@ -1,4 +1,4 @@
-# Deploy a Dynamic Web App on AWS using CI/CD Pipelines and GitHub Actions
+# Deploy a Dynamic Web App on AWS using CI/CD Pipelines with GitHub Actions
 
 ![Alt text](Diagram.png)
 ![Alt text](Diagram_2.png)
