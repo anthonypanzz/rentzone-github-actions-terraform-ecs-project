@@ -20,6 +20,7 @@ The following steps describe how AWS services are configured and how the CI/CD p
 To interact with AWS services, you need to configure your AWS credentials. These will be used by GitHub Actions to interact with AWS services securely.
 ![Screenshot 2025-03-27 053925](https://github.com/user-attachments/assets/8b9f1b90-4bda-4615-a48b-d9cc6021d85b)
 
+---
 
 ### 2. Build AWS Infrastructure with Terraform
 
@@ -31,11 +32,15 @@ Use Terraform to manage and provision the necessary AWS resources, including EC2
 ![Screenshot 2025-03-27 054023](https://github.com/user-attachments/assets/bb450ef3-dadf-4bbf-9c9b-70773ad5716b)
 ![Screenshot 2025-03-27 054043](https://github.com/user-attachments/assets/83aae619-72fc-4308-85ef-6575de09dc25)
 
+---
+
 ### 3. Create an ECR Repository
 
 An Amazon Elastic Container Registry (ECR) repository is used to store the Docker images for the dynamic web application.
 ![Screenshot 2025-03-27 054108](https://github.com/user-attachments/assets/18289fc6-4f1f-4b06-bde3-6b875b4181f5)
 ![Screenshot 2025-03-27 055507](https://github.com/user-attachments/assets/269c8e59-3ba5-44d5-989f-df1835dd6856)
+
+---
 
 
 ### 4. Start a Self-hosted EC2 Runner
@@ -45,6 +50,8 @@ For running the CI/CD pipeline with GitHub Actions, you'll need a self-hosted EC
 ![Screenshot 2025-03-27 055544](https://github.com/user-attachments/assets/1d0354f9-bdc8-47b5-a8bc-a727e607e4c1)
 
 
+---
+
 ### 5. Build and Push Docker Image to ECR
 
 GitHub Actions will automate the process of building and pushing the Docker image to the ECR repository.
@@ -53,12 +60,16 @@ GitHub Actions will automate the process of building and pushing the Docker imag
 ![Screenshot 2025-03-27 055615](https://github.com/user-attachments/assets/95e483a3-dd09-41da-8380-3c9e67bf1f29)
 
 
+---
+
 ### 6. Create an Environment File and Export to S3
 
 An environment file containing necessary configurations (e.g., database URL, credentials) is created and uploaded to an S3 bucket.
 ![Screenshot 2025-03-27 054223](https://github.com/user-attachments/assets/072fa606-8ae4-48ca-bfc4-eb42e1a3fa7b)
 ![Screenshot 2025-03-27 055649](https://github.com/user-attachments/assets/24b21378-cda0-4e54-8193-820a53c97294)
 
+
+---
 
 ### 7. Migrate Data into the RDS Database with Flyway
 
@@ -67,11 +78,15 @@ Flyway will handle database migrations to ensure the RDS database schema is up t
 ![Screenshot 2025-03-27 055740](https://github.com/user-attachments/assets/9cc6a052-ed81-43f0-ab90-f62bfeb29ec6)
 
 
+---
+
 ### 8. Stop the Self-hosted EC2 Runner
 
 Once the CI/CD pipeline completes, stop the self-hosted EC2 runner to save resources.
 ![Screenshot 2025-03-27 054308](https://github.com/user-attachments/assets/85b19e33-beb9-4a22-9285-25c55fe3545f)
 
+
+---
 
 ### 9. Create a New Task Definition Revision
 
@@ -82,11 +97,15 @@ After the Docker image is pushed to ECR, create a new task definition revision i
 ![Screenshot 2025-03-27 055859](https://github.com/user-attachments/assets/488fe787-928c-40cb-9845-4627b94c47a5)
 
 
+---
+
 ### 10. Restart the EC2 Fargate Service
 
 Force a new deployment by restarting the ECS Fargate service using the updated task definition.
 ![Screenshot 2025-03-27 054402](https://github.com/user-attachments/assets/6a68b588-7b2a-45e4-a1e4-ff4a698c519a)
 ![Screenshot 2025-03-27 055841](https://github.com/user-attachments/assets/4355fb01-ecdb-420e-ab28-8a55ed788e4c)
+
+---
 
 ### Dynamic Web Application Deployment
 ![Screenshot 2025-03-27 060643](https://github.com/user-attachments/assets/2871818a-9f71-4aeb-aabb-51ac3f07d1ce)
