@@ -12,6 +12,7 @@ This project demonstrates the deployment of a dynamic web application on AWS usi
 
 The following steps describe how AWS services are configured and how the CI/CD pipeline is set up to automate the deployment of the dynamic web application.
 
+---
 
 ## Steps
 
