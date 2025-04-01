@@ -28,7 +28,7 @@ To interact with AWS services, I needed to configure your AWS credentials. These
 Used Terraform to manage and provision the necessary AWS resources, including EC2 instances, S3 buckets, ECR repositories, RDS, and ECS clusters. This will provision the infrastructure resources on AWS.
 ![Screenshot 2025-03-27 054518](https://github.com/user-attachments/assets/e242646a-91c0-417c-82f0-2b8ad33d0636)
 
----
+
 ![Screenshot 2025-03-27 053943](https://github.com/user-attachments/assets/3651558e-c089-4485-862f-7ef919669a7b)
 ![Screenshot 2025-03-27 054005](https://github.com/user-attachments/assets/2ac462fe-4a15-40d4-854b-166c251a0370)
 ![Screenshot 2025-03-27 054023](https://github.com/user-attachments/assets/bb450ef3-dadf-4bbf-9c9b-70773ad5716b)
